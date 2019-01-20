@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Admin Dashboard</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    <!--Used For Icon-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <link href="custom-css/style.css" rel="stylesheet">
+    <link href="custom-css/searchbar.css" rel="stylesheet">
+    <link href="custom-css/dashboard.css" rel="stylesheet">
+    <link href="custom-css/dropdown.css" rel="stylesheet">
+    <link href="custom-css/elements.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Admin Dashboard</h3>
+                <strong>AD</strong>
+            </div>
+
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="indexPurple.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-copy"></i>
+                        Pages
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="profile-page.html">Profile Page</a>
+                        </li>
+                        <li>
+                            <a href="signup.html">Sign Up Page</a>
+                        </li>
+                        <li>
+                            <a href="login.html">Login Page</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="profiles.html">
+                        <i class="fas fa-users"></i>
+                        Profiles
+                    </a>
+                </li>
+                <li>
+                    <a href="chart.html">
+                        <i class="fas fa-chart-pie"></i>
+                        Charts
+                    </a>
+                </li>                
+                <li>
+                    <a href="progress-bars.html">
+                        <i class="fas fa-align-left"></i>
+                        Progress Bars
+                    </a>
+                </li>
+                <li>
+                <li>
+                    <a href="calendar.html">
+                        <i class="fa fa-calendar"></i>
+                        Calender
+                    </a>
+                </li>
+                <li>
+                    <a href="table.html">
+                        <i class="fas fa-table"></i>
+                        Table
+                    </a>
+                </li>
+                <li>
+                    <a href="mail.html">
+                        <i class="far fa-envelope"></i>
+                        Mail
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="elements.html">
+                        <i class="fab fa-elementor"></i>
+                        Elements
+                    </a>
+                </li>
+                <li>
+                    <a href="../main.html">
+                        <i class="fas fa-arrow-left"></i>
+                        Main Page
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- End of sidebar -->
+
+
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <!-- Top navbar -->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info" style="background-color: #333; border-color: #333; cursor: pointer;">
+                        <i class="fas fa-cogs"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+
+                            <!-- Search Bar Form -->
+                            <div class="d-flex justify-content-center h-100">
+                                <div class="searchbar">
+                                    <input class="search_input" type="text" name="" placeholder="Search...">
+                                    <a href="#" class="search_icon" style="color: white;"><i class="fas fa-search"></i></a>
+                                </div>
+                            </div>
+
+
+                            <!-- Notification Dropdown Part -->
+                            <li class="nav-item">
+                                
+                                <div class="hidden-phone" style="position: relative;">
+                                    <a data-toggle="dropdown" href="#" aria-expanded="false">
+                                     <i class="material-icons" style="height: 30px;">add_alert</i>
+                                    </a>
+                                    <ul class="dropdown-menu" style="background-color: #f3e5f5;">
+                                        <p class="p-3 mb-0" style="border-bottom: 0.5px solid #ccc;">Notifications</p>
+                                        <li>
+                                            <a href="#" class="dropdown-item preview-item" style="background-color: #f3e5f5;">
+                                                <div class="preview-thumbnail">
+                                                    <div class="preview-icon bg-success">
+                                                        <i class="mdi mdi-calendar"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="preview-item-content d-flex align-items-start flex-column">
+                                                    <p class="preview-subject font-weight-bold mb-1">Event today</p>
+                                                    <p class="text-gray ellipsis mb-0">
+                                                    Just a reminder that you have an event today
+                                                    </p>
+                                                </div> 
+                                            </a>
+                                        </li>                                        
+
+                                        <li>
+                                            <a href="#" class="dropdown-item preview-item" style="background-color: #f3e5f5;">
+                                                <div class="preview-thumbnail">
+                                                    <div class="preview-icon bg-warning">
+                                                        <i class="mdi mdi-settings"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="preview-item-content d-flex align-items-start flex-column">
+                                                    <p class="preview-subject font-weight-bold mb-1">Settings</p>
+                                                    <p class="text-gray ellipsis mb-0">
+                                                    Update dashboard
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="#" class="dropdown-item preview-item" style="background-color: #f3e5f5;">
+                                                <div class="preview-thumbnail">
+                                                    <div class="preview-icon bg-info">
+                                                        <i class="mdi mdi-link-variant"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="preview-item-content d-flex align-items-start flex-column">
+                                                    <p class="preview-subject font-weight-bold mb-1">Launch Admin</p>
+                                                    <p class="text-gray ellipsis mb-0">
+                                                    New admin wow!
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        
+                                        <p class="p-3 mb-0 text-center" style="cursor: pointer;">See all notifications</p>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- End Of Notification Dropdown Part -->
+
+                            <!-- Message Part -->
+                            <li class="nav-item">
+                                <div class="hidden-phone" style="position: relative;">
+                                    <a data-toggle="dropdown" href="#">
+                                     <i class="material-icons" style="height: 30px;">email</i>
+                                    </a>
+                                    <ul class="dropdown-menu" style="padding: 10px; width: 300px; background-color: #f3e5f5;">
+                                        <p class="p-3 mb-0" style="border-bottom: 0.5px solid #ccc;">Messages</p>
+                                        
+                                        <li>
+                                            <a href="#" class="dropdown-item preview-item" style="background-color: #f3e5f5;">
+                                                <div class="preview-thumbnail" style="float: left;">
+                                                    <img src="images/faces/face1.jpeg" alt="image" class="profile-pic">
+                                                </div>
+                                                <div class="preview-item-content d-flex align-items-start flex-column">
+                                                    <p class="preview-subject ellipsis mb-1 font-weight-bold">DEF send you a message</p>
+                                                    <p class="mb-0" style="color: #8c8c8c;">
+                                                    1 Minutes ago
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="#" class="dropdown-item preview-item" style="background-color: #f3e5f5;">
+                                                <div class="preview-thumbnail" style="float: left;">
+                                                    <img src="images/faces/face2.jpeg" alt="image" class="profile-pic">
+                                                </div>
+                                                <div class="preview-item-content d-flex align-items-start flex-column">
+                                                    <p class="preview-subject ellipsis mb-1 font-weight-bold">ABC send you a message</p>
+                                                    <p class="mb-0" style="color: #8c8c8c;">
+                                                    15 Minutes ago
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="#" class="dropdown-item preview-item" style="background-color: #f3e5f5;">
+                                                <div class="preview-thumbnail" style="float: left;">
+                                                    <img src="images/faces/face3.jpg" alt="image" class="profile-pic">
+                                                </div>
+                                                <div class="preview-item-content d-flex align-items-start flex-column">
+                                                    <p class="preview-subject ellipsis mb-1 font-weight-bold">Profile picture updated</p>
+                                                    <p class="mb-0" style="color: #8c8c8c;">
+                                                    18 Minutes ago
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        
+                                        <p class="p-3 mb-0" style="text-align: center; cursor: pointer;">4 new messages</p>
+                                    </ul>
+                                </div>                                
+                            </li>                            
+                            <!-- End of Message Dropdown -->
+
+
+                            <!-- Logout Icon -->
+                            <li class="nav-item">
+                                <a href="login.html">
+                                    <i class="fas fa-sign-out-alt" style="size: 20px;"></i>Logout
+                                </a>
+                            </li>
+                            <!-- End of Logout icon -->
+
+                        </ul>
+                    </div>
+                    <!-- End of navbar collapse -->
+                </div>
+                <!-- End of container fluid -->
+            </nav>
+            <!-- End of nav -->
+
+            <!----- ELEMENT PART ----->            
+
+            <!-- First Row -->            
+            <div class="row" style="padding: 10px;">
+                <!-- Searchbar -->
+                <div class="col-lg-6 col-md-6 col-sm-12" style="padding: 5px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Search Bar</h5>
+                        <div class="d-flex justify-content-center h-100">
+                            <div class="searchbar">
+                                <input class="search_input" type="text" name="" placeholder="Search...">
+                                <a href="#" class="search_icon" style="color: white;"><i class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                <!-- End of Searchbar  -->
+
+
+                <!-- Button List -->
+                <div class="col-lg-6 col-md-6 col-sm-12" style="padding: 5px;">
+                    <div class="card-body">
+                        <h5 class="card-title" >List Of Menu Buttons</h5>
+                        <div class="btn-group">
+                            <button type="button" class="mb-2 mr-2 btn btn-primary">Primary</button>                   
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="button" class="mb-2 mr-2 btn btn-secondary">Secondary</button>
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="button" class="mb-2 mr-2 btn btn-success">Success</button>                   
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="button" class="mb-2 mr-2 btn btn-info">Info</button>
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="button" class="mb-2 mr-2 btn btn-warning">Warning</button>
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="button" class="mb-2 mr-2 btn btn-danger">Danger</button>
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="button" class="mb-2 mr-2 btn btn-focus">Focus</button>
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="button"class="mb-2 mr-2 btn btn-alternate">Alt</button>
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="button"class="mb-2 mr-2 btn btn-light">Light</button>
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="button"class="mb-2 mr-2 btn btn-dark">Dark</button>
+                        </div> 
+                    </div>
+                </div>
+                <!-- End of Button List -->                
+            </div>
+            <!-- End of First Row -->
+
+            <!-- Second Row -->            
+            <div class="row" style="padding: 10px;"> 
+                <!-- Button List -->
+                <div class="col-lg-6 col-md-6 col-sm-12" style="padding: 5px;">
+                    <div class="card-body">
+                        <h5 class="card-title" >List Of Dropdowns</h5>                        
+                        <div class="dropdown dropdownMargin">
+
+                            <!-- Primary -->
+                            <div class="btn-group">
+                                <div class="dropdown dropdownMargin">
+                                    <button type="button" class="mb-2 mr-2 btn btn-primary dropdown-toggle" data-toggle="dropdown">Primary
+                                    <span class="caret"></span>
+                                </button> 
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                                </div>                                
+                            </div>                   
+                        
+                            <!-- Secondary -->
+                            <div class="btn-group">
+                                <div class="dropdown dropdownMargin">
+                                    <button type="button" class="mb-2 mr-2 btn btn-secondary dropdown-toggle" data-toggle="dropdown">Secondary
+                                    <span class="caret"></span>
+                                </button> 
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                                </div>                                
+                            </div>                   
+                        
+                            <!-- Focus -->
+                            <div class="btn-group">
+                                <div class="dropdown dropdownMargin">
+                                    <button type="button" class="mb-2 mr-2 btn btn-focus dropdown-toggle" data-toggle="dropdown">Focus
+                                    <span class="caret"></span>
+                                </button> 
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                                </div>                                
+                            </div>                   
+                        
+                            <!-- Alternative -->
+                            <div class="btn-group">
+                                <div class="dropdown dropdownMargin">
+                                    <button type="button" class="mb-2 mr-2 btn btn-alternate dropdown-toggle" data-toggle="dropdown">Alt
+                                    <span class="caret"></span>
+                                </button> 
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                                </div>                                
+                            </div>                   
+                            
+                            <!-- Light -->
+                            <div class="btn-group">
+                                <div class="dropdown dropdownMargin">
+                                    <button type="button" class="mb-2 mr-2 btn btn-light dropdown-toggle" data-toggle="dropdown">Light
+                                    <span class="caret"></span>
+                                </button> 
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                                </div>                                
+                            </div>                   
+                            
+                            <!-- Dark -->
+                            <div class="btn-group">
+                                <div class="dropdown dropdownMargin">
+                                    <button type="button" class="mb-2 mr-2 btn btn-dark dropdown-toggle" data-toggle="dropdown">Dark
+                                    <span class="caret"></span>
+                                </button> 
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                                </div>                                
+                            </div>                   
+                        
+                            <!-- Success -->
+                            <div class="btn-group">
+                                <div class="dropdown dropdownMargin">
+                                    <button type="button" class="mb-2 mr-2 btn btn-success dropdown-toggle" data-toggle="dropdown">Success
+                                    <span class="caret"></span>
+                                </button> 
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                                </div>                                
+                            </div>                   
+                            
+                            <!-- Info -->
+                            <div class="btn-group">
+                                <div class="dropdown dropdownMargin">
+                                    <button type="button" class="mb-2 mr-2 btn btn-info dropdown-toggle" data-toggle="dropdown">Info
+                                    <span class="caret"></span>
+                                </button> 
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                                </div>                                
+                            </div>                   
+                            
+                            <!-- Warning -->
+                            <div class="btn-group">
+                                <div class="dropdown dropdownMargin">
+                                    <button type="button" class="mb-2 mr-2 btn btn-warning dropdown-toggle" data-toggle="dropdown">Warning
+                                    <span class="caret"></span>
+                                </button> 
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                                </div>                                
+                            </div>                   
+                            
+                            <!-- Danger -->
+                            <div class="btn-group">
+                                <div class="dropdown dropdownMargin">
+                                    <button type="button" class="mb-2 mr-2 btn btn-danger dropdown-toggle" data-toggle="dropdown">Danger
+                                    <span class="caret"></span>
+                                </button> 
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                                </div>                                
+                            </div>
+
+                        </div>                        
+                    </div>
+                </div>
+                <!-- End of Button List -->   
+
+                <!-- Heading List -->
+                <div class="col-lg-6 col-md-6 col-sm-12" style="padding: 5px;">
+                    <div class="card-body">
+                        <h5 class="card-title">Headings</h5>
+                        <div class="d-flex h-100">
+                            <div>
+                                <h1>This is heading 1</h1>
+                                <h2>This is heading 2</h2>
+                                <h3>This is heading 3</h3>
+                                <h4>This is heading 4</h4>
+                                <h5>This is heading 5</h5>
+                                <h6>This is heading 6</h6>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                <!-- End of Heading List  -->             
+            </div>
+            <!-- End of Second Row -->
+
+            <!-- Third Row ICONS -->
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12" style="padding: 5px;">
+                    <div class="card-body">
+                        <h5 class="card-title" >List Of Icons</h5>                        
+                        <div class="row">
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="far fa-envelope fa-2x"></i><br/>                                
+                                <p>far fa-envelope</p>                                    
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fas fa-tachometer-alt fa-2x"></i>
+                                <p>fas fa-tachometer-alt</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fas fa-users fa-2x"></i>
+                                <p>fas fa-users</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fas fa-chart-pie fa-2x"></i>
+                                <p>fas fa-chart-pie</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fas fa-chart-line fa-2x"></i>
+                                <p>fas fa-chart-line</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fa fa-calendar fa-2x"></i>
+                                <p>fa fa-calendar</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fas fa-table fa-2x"></i>
+                                <p>fas fa-table</p>
+                            </div>                        
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fab fa-elementor fa-2x"></i>
+                                <p>fab fa-elementor</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fas fa-sign-in-alt fa-2x"></i>
+                                <p>fas fa-sign-in-alt</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fas fa-sign-out-alt fa-2x"></i>
+                                <p>fas fa-sign-out-alt</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fas fa-search fa-2x"></i>
+                                <p>fas fa-search</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fas fa-cogs fa-2x"></i>
+                                <p>fas fa-cogs</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fas fa-bars fa-2x"></i>
+                                <p>fas fa-bars</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fas fa-arrow-left fa-2x"></i>
+                                <p>fas fa-arrow-left</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fas fa-arrow-right"></i>
+                                <p>fas fa-arrow-right</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fas fa-arrow-up fa-2x"></i>
+                                <p>fas fa-arrow-up</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fas fa-arrow-down fa-2x"></i>
+                                <p>fas fa-arrow-down</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="far fa-bookmark fa-2x"></i>
+                                <p>far fa-bookmark</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fas fa-angle-up fa-2x"></i>
+                                <p>fas fa-angle-up</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fas fa-angle-down fa-2x"></i>
+                                <p>fas fa-angle-down</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fas fa-angle-right fa-2x"></i>
+                                <p>fas fa-angle-right</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fas fa-angle-left fa-2x"></i>
+                                <p>fas fa-angle-left</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fas fa-address-book fa-2x"></i>
+                                <p>fas fa-address-book</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="far fa-address-card fa-2x"></i>
+                                <p>far fa-address-card</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fas fa-align-center fa-2x"></i>
+                                <p>fas fa-align-center</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fas fa-align-justify fa-2x"></i>
+                                <p>fas fa-align-justify</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fas fa-align-left fa-2x"></i>
+                                <p>fas fa-align-left</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="fas fa-align-right fa-2x"></i>
+                                <p>fas fa-align-right</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="far fa-comment-alt fa-2x"></i>
+                                <p>far fa-comment-alt</p>
+                            </div>
+                            <div class="font-icon-wrapper col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                                <i class="far fa-edit fa-2x"></i>
+                                <p>far fa-edit</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END OF ICONS -->
+
+            <!-- End Of ELEMENT PART -->
+        </div>
+        <!-- End of Content Class -->
+    </div>
+    <!-- End of Wrapper Class -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">
+                          Shiva Neupane
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                          Code House Media
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="copyright" id="copyright">
+                &copy;
+                <script>
+                    document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+                </script>, Coded by
+                <a href="#">Shiva Neupane.</a>.
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

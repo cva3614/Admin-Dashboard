@@ -1,0 +1,66 @@
+.barchart, .piechart{
+  background-color: #fff;
+  width: 10%;
+  height: 400px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.barchart{
+  margin-right: 1%;
+  float: left;
+}
+.piechart{
+          margin-left: 1%;
+  float: right;
+}
+#bar-chart, #pie-chart{
+  width: 400px;
+          margin: 0 auto;
+  position: relative;
+}
+#bar-chart {
+  height: 300px;
+}
+#bar-chart::before {
+  content: "";
+  position: absolute;
+  display: block;
+          left: 0;
+  height: 30px;
+          margin: 0 auto;
+  background: #FAFAFA;
+  box-shadow: 1px 1px 0 0 #DDD;
+          clear: both;
+}
+#pie-chart {
+          width: 400px;
+  height: 200px;
+}
+#pie-chart::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 160px;
+  height: 190px;
+  left: 255px;
+  background: #FAFAFA;
+  box-shadow: 1px 1px 0 0 #DDD;
+          clear: both;
+}
+#pie-chart::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 260px;
+  left: 70px;
+  width: 170px;
+  height: 2px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 50%;
+  box-shadow: 0 0 3px 4px rgba(0,0,0,0.1);
+}
+/*@media screen and (max-width: 1000px){
+    main{
+        display: block;
+    }
+}*/

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Profile Page</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    <!--Used For Icon-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <link href="custom-css/style.css" rel="stylesheet">
+    <link href="custom-css/searchbar.css" rel="stylesheet">
+    <link href="custom-css/dashboard.css" rel="stylesheet">
+    <link href="custom-css/dropdown.css" rel="stylesheet">
+    <link href="custom-css/profile-page.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Admin Dashboard</h3>
+                <strong>AD</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="indexGray.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-copy"></i>
+                        Pages
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li class="active">
+                            <a href="profile-page.html">Profile Page</a>
+                        </li>
+                        <li>
+                            <a href="signup.html">Sign Up Page</a>
+                        </li>
+                        <li>
+                            <a href="login.html">Login Page</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="profiles.html">
+                        <i class="fas fa-users"></i>
+                        Profiles
+                    </a>
+                </li>
+                <li>
+                    <a href="chart.html">
+                        <i class="fas fa-chart-pie"></i>
+                        Charts
+                    </a>
+                </li>
+                <li>
+                    <a href="progress-bars.html">
+                        <i class="fas fa-align-left"></i>
+                        Progress Bars
+                    </a>
+                </li>
+                <li>
+                <li>
+                    <a href="calendar.html">
+                        <i class="fa fa-calendar"></i>
+                        Calender
+                    </a>
+                </li>
+                <li>
+                    <a href="table.html">
+                        <i class="fas fa-table"></i>
+                        Table
+                    </a>
+                </li>
+                <li>
+                    <a href="mail.html">
+                        <i class="far fa-envelope"></i>
+                        Mail
+                    </a>
+                </li>
+                <li>
+                    <a href="elements.html">
+                        <i class="fab fa-elementor"></i>
+                        Elements
+                    </a>
+                </li>
+                <li>
+                    <a href="../main.html">
+                        <i class="fas fa-arrow-left"></i>
+                        Main Page
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- End of sidebar -->
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <!-- Top navbar -->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info" style="background-color: #333; border-color: #333; cursor: pointer;">
+                        <i class="fas fa-cogs"></i>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+
+                            <!-- Search Bar Form -->                        
+                            <div class="d-flex justify-content-center h-100">
+                                <div class="searchbar">
+                                    <input class="search_input" type="text" name="" placeholder="Search...">
+                                    <a href="#" class="search_icon" style="color: white;"><i class="fas fa-search"></i></a>
+                                </div>
+                            </div>  
+
+                            <!-- Notification Dropdown Part -->
+                            <li class="nav-item">
+                                
+                                <div class="hidden-phone" style="position: relative;">
+                                    <a data-toggle="dropdown" href="#" aria-expanded="false">
+                                     <i class="material-icons" style="height: 30px;">add_alert</i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <p class="p-3 mb-0" style="border-bottom: 0.5px solid #ccc;">Notifications</p>
+                                        <li>
+                                            <a href="#" class="dropdown-item preview-item">
+                                                <div class="preview-thumbnail">
+                                                    <div class="preview-icon bg-success">
+                                                        <i class="mdi mdi-calendar"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="preview-item-content d-flex align-items-start flex-column">
+                                                    <p class="preview-subject font-weight-bold mb-1">Event today</p>
+                                                    <p class="text-gray ellipsis mb-0">
+                                                    Just a reminder that you have an event today
+                                                    </p>
+                                                </div> 
+                                            </a>
+                                        </li>                                        
+
+                                        <li>
+                                            <a href="#" class="dropdown-item preview-item">
+                                                <div class="preview-thumbnail">
+                                                    <div class="preview-icon bg-warning">
+                                                        <i class="mdi mdi-settings"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="preview-item-content d-flex align-items-start flex-column">
+                                                    <p class="preview-subject font-weight-bold mb-1">Settings</p>
+                                                    <p class="text-gray ellipsis mb-0">
+                                                    Update dashboard
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="#" class="dropdown-item preview-item">
+                                                <div class="preview-thumbnail">
+                                                    <div class="preview-icon bg-info">
+                                                        <i class="mdi mdi-link-variant"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="preview-item-content d-flex align-items-start flex-column">
+                                                    <p class="preview-subject font-weight-bold mb-1">Launch Admin</p>
+                                                    <p class="text-gray ellipsis mb-0">
+                                                    New admin wow!
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        
+                                        <p class="p-3 mb-0 text-center">See all notifications</p>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- End Of Notification Dropdown Part -->
+
+                            <!-- Message Part -->
+                            <li class="nav-item">
+                                <div class="hidden-phone" style="position: relative;">
+                                    <a data-toggle="dropdown" href="#">
+                                     <i class="material-icons" style="height: 30px;">email</i>
+                                    </a>
+                                    <ul class="dropdown-menu" style="padding: 10px; width: 300px;">
+                                        <p class="p-3 mb-0" style="border-bottom: 0.5px solid #ccc;">Messages</p>
+                                        
+                                        <li>
+                                            <a href="#" class="dropdown-item preview-item">
+                                                <div class="preview-thumbnail" style="float: left;">
+                                                    <img src="images/faces/face1.jpeg" alt="image" class="profile-pic">
+                                                </div>
+                                                <div class="preview-item-content d-flex align-items-start flex-column">
+                                                    <p class="preview-subject ellipsis mb-1 font-weight-normal">DEF send you a message</p>
+                                                    <p class="mb-0" style="color: #8c8c8c;">
+                                                    1 Minutes ago
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="#" class="dropdown-item preview-item">
+                                                <div class="preview-thumbnail" style="float: left;">
+                                                    <img src="images/faces/face2.jpeg" alt="image" class="profile-pic">
+                                                </div>
+                                                <div class="preview-item-content d-flex align-items-start flex-column">
+                                                    <p class="preview-subject ellipsis mb-1 font-weight-normal">ABC send you a message</p>
+                                                    <p class="mb-0" style="color: #8c8c8c;">
+                                                    15 Minutes ago
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a class="dropdown-item preview-item">
+                                                <div class="preview-thumbnail" style="float: left;">
+                                                    <img src="images/faces/face3.jpg" alt="image" class="profile-pic">
+                                                </div>
+                                                <div class="preview-item-content d-flex align-items-start flex-column">
+                                                    <p class="preview-subject ellipsis mb-1 font-weight-normal">Profile picture updated</p>
+                                                    <p class="mb-0" style="color: #8c8c8c;">
+                                                    18 Minutes ago
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        
+                                        <p class="p-3 mb-0" style="text-align: center;">4 new messages</p>
+                                    </ul>
+                                </div>                                
+                            </li>                            
+                            <!-- End of Message Dropdown -->
+
+
+                            <!-- Logout Icon -->
+                            <li class="nav-item">
+                                <a href="login.html">
+                                    <i class="fas fa-sign-out-alt" style="size: 20px;"></i>Logout
+                                </a>
+                            </li>
+                            <!-- End of Logout icon -->
+
+                        </ul>
+                    </div>
+                    <!-- End of navbar collapse -->
+                </div>
+                <!-- End of container fluid -->
+            </nav>
+            <!-- End of nav -->
+            <!----- PROFILE PAGE PART ----->
+            <div class="emp-profile">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="profile-img">
+                            <img src="images/profile-pic/pp1.jpg" alt="profile pic" style="width: 275px; height: 183px;"  />
+                            <!-- <div class="file btn btn-primary">
+                                <p>Change Photo</p>
+                                <input type="file" name="file"/>
+                            </div> -->
+                        </div>
+                    </div>                        
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="profile-head">
+                            <h5>
+                                Shiva Neupane
+                            </h5>
+                            <h6>
+                                Web Developer and Designer
+                            </h6>
+                            <p class="proile-rating">RANKINGS : <span>8/10</span></p>                                
+                        </div>
+                    </div>                        
+                </div>
+
+                <div class="row">
+                    
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="profile-head">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <label>User Id</label>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <p>shiva123</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <label>Name</label>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <p>Shiva Neupane</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <label>Email</label>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <p>shivaneupane3614@gmail.com</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <label>Phone</label>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <p>123 456 7890</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <label>Profession</label>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <p>Web Developer</p>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <label>Experience</label>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <p>Medium</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <label>Hourly Rate</label>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <p>10$/hr</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <label>Total Projects</label>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <p>10</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <label>English Level</label>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <p>Expert</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <label>Availability</label>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <p>6 months</p>
+                                            </div>
+                                        </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>Your Bio</label><br/>
+                                        <p>Your detail description</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row col-lg-12 col-md-12 col-sm-12">                        
+                        <div class="col-lg-6 col-md-6 col-sm-6" style="margin: 20px 0px;">
+                            <p>WORK LINK</p>
+                            <a href="">Website Link</a><br/>
+                            <a href="">Profile</a><br/>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6" style="margin: 20px 0px;">
+                            <p>SKILLS</p>
+                            <a href="">Web Designer</a><br/>
+                            <a href="">Web Developer</a><br/>
+                            <a href="">WordPress</a><br/>
+                            <a href="">WooCommerce</a><br/>
+                            <a href="">JAVA, .Net</a><br/>
+                        </div>
+                    </div>
+                </div>           
+            </div>
+            <!----- END OF PROFILE PAGE PART ----->
+        </div>
+        <!-- End of Content Class -->
+    </div>
+    <!-- End of Wrapper Class -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">
+                          Shiva Neupane
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                          Code House Media
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="copyright" id="copyright">
+                &copy;
+                <script>
+                    document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+                </script>, Coded by
+                <a href="#">Shiva Neupane.</a>.
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
