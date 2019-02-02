@@ -1,3 +1,5 @@
+Note:This file is heavy due to large image size. You can remove those image and use small sized ones
+
 # Admin-Dashboard
 1)This project(only frontend) contains 4 different themes(Black, Blue, Gray and Purple).
 2)main.html is the commercialized page which have banner image, screenshot image of project which scroll on hover and got the link for different themes.
